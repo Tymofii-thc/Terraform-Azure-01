@@ -7,3 +7,9 @@ resource "azurerm_storage_account" "storacc01" {
   shared_access_key_enabled     = true
   public_network_access_enabled = true
 }
+
+resource "azurerm_storage_container" "photos01" {
+  name = "photos01"
+  storage_account_id = azurerm_storage_account.storacc01.id
+  container_access_type = "private"
+}
