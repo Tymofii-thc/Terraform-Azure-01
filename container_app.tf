@@ -46,7 +46,7 @@ resource "azurerm_container_app" "conapp01" {
 
   ingress {
     external_enabled = true
-    target_port      = 80
+    target_port      = 8000
     traffic_weight {
       latest_revision = true
       percentage      = 100
